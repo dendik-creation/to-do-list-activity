@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function | To do list</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .end-25{
+            right: 5em;
+        }
+        li{
+            padding: 1em !important;
+            transition: all ease 0.5s;
+        }
+        #btnTambah{
+            transition: all ease 0.3s;
+            transform: translateY(0px);
+        }
+        #btnTambah:disabled{
+            opacity: 0;
+            transform: translateY(-5px);
+            transition: all ease 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="h2 p-3 bg-warning text-center">
+        To do list Function
+    </h2>
+    <div class="container mt-4 d-flex justify-content-center">
+        <div class="w-50">
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="" class="form-label text-center w-100">Add Today's Activity</label>
+                    <div class="d-flex position-relative">
+                        <input type="text" id="kegiatanInput" class="form-control">
+                        <input type="button" class="position-absolute btn btn-primary end-0 rounded" value="Add" id="btnTambah" onclick="create()" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <ul class="list-group list-group-flush" id="kegiatanList">
+                    <!-- Loop To do List -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+</html>
